@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "QTimer"
 #include "QMessageBox"
+#include "QTime"
+#include "QDate"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,7 +18,7 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    void timer_func();
+
     ~MainWindow();
 
 
@@ -32,6 +34,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QTimer *timer;
+    QTimer *timer,*timer2;
+    void main_timer_func();
+    void timer_func();
 };
 #endif // MAINWINDOW_H
