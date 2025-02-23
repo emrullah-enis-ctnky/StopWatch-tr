@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "QMessageBox"
 #include "time_set_window.h"
+#include "QCloseEvent"
 namespace Ui {
 class second_window;
 }
@@ -22,9 +23,17 @@ signals:
 private slots:
     void time_set_triggered();
     void third_window_set();
+    void reset_button_clicked();
+    void start_pause_clicked();
+    void third_window_close();
 private:
     Ui::second_window *ui;
     time_set_window *third_window;
+    void timer_func();
+    void label_time_set();
+    QTimer *timer;
+    void closeEvent(QCloseEvent *event) override;
+
 };
 
 
