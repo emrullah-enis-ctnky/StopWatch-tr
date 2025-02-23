@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         images.qrc
+        second_window.h second_window.cpp second_window.ui
+        time_set_window.h time_set_window.cpp time_set_window.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET kronometre APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
